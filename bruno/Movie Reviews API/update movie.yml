@@ -1,0 +1,24 @@
+info:
+  name: update movie
+  type: http
+  seq: 9
+
+http:
+  method: PUT
+  url: "{{baseUrl}}/api/movies/6"
+  body:
+    type: json
+    data: |-
+      {
+        "title": "Обновлённое название"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
