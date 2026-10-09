@@ -1,0 +1,24 @@
+info:
+  name: update review status
+  type: http
+  seq: 16
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/api/reviews/6/status"
+  body:
+    type: json
+    data: |-
+      {
+        "status": "approved"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

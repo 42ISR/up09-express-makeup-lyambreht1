@@ -1,0 +1,30 @@
+info:
+  name: create movie
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/movies"
+  body:
+    type: json
+    data: |-
+      {
+        "title": "Новый фильм",
+        "director": "Иван Иванов",
+        "year": 2024,
+        "country": "Россия",
+        "description": "Описание нового фильма",
+        "posterUrl": "https://placehold.co/400x600?text=New",
+        "genreIds": [1, 2]
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

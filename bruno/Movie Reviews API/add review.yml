@@ -1,0 +1,26 @@
+info:
+  name: add review
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/movies/1/reviews"
+  body:
+    type: json
+    data: |-
+      {
+        "rating": 9,
+        "title": "Отличный фильм",
+        "body": "Обязательно к просмотру!"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

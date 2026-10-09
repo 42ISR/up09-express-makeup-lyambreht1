@@ -1,0 +1,8 @@
+name: local
+variables:
+  - name: baseUrl
+    value: http://localhost:3000
+    description: ""
+  - name: token
+    value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzkxNTQyMzExLCJleHAiOjE3OTIxNDcxMTF9.Z05t4Qf2WVK1SasvIOFunShGHIyWmefy0pnlExudjr8
+    description: ""
